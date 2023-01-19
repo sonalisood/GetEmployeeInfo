@@ -1,0 +1,54 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "getEmployeeInfo",
+    "description" : "getEmployeeInfo service"
+  },
+  "host" : "localhost:8080",
+  "basePath" : "/",
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/getemployeeinfo" : {
+      "get" : {
+        "summary" : "getGetEmployeeInfo",
+        "description" : "getGetEmployeeInfo",
+        "operationId" : "get-getemployeeinfo",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "empID",
+          "in" : "query",
+          "description" : "",
+          "type" : "string",
+          "required" : false
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a Response to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/Response"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "Response" : {
+      "type" : "object",
+      "required" : [ "Country", "Age", "Name" ],
+      "properties" : {
+        "Name" : {
+          "type" : "string"
+        },
+        "Country" : {
+          "type" : "string"
+        },
+        "Age" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}
