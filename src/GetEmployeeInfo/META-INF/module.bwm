@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:rest="http://xsd.tns.tibco.com/bw/models/binding/rest" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_d02BoJgFEe203sdugDDbQw" targetNamespace="http://tns.tibco.com/bw/composite/GetEmployeeInfo" name="GetEmployeeInfo" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:service xmi:id="_3BHc0JgFEe203sdugDDbQw" name="getemployeeinfo" promote="ComponentgetEmployeeInfo/getemployeeinfo">
+    <sca:interface.wsdl xmi:id="_3BcM8JgFEe203sdugDDbQw" interface="http://xmlns.example.com/20230119200044PLT#wsdl.interface(getemployeeinfo)" scaext:wsdlLocation="../Processes/getemployeeinfo/getEmployeeInfo.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_3BsroJgFEe203sdugDDbQw" name="RestService" path="/getemployeeinfo" docBasePath="http://localhost:7777/GetEmployeeInfo" docResourcePath="getEmployeeInfo" basePath="/" connector="getemployeeinfo.getEmployeeInfo" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/getemployeeinfo.getEmployeeInfo-getEmployeeInfo.json">
+      <operation xmi:id="_3B0ncJgFEe203sdugDDbQw" operationName="get" nickname="get-getemployeeinfo" httpMethod="GET" notes="getGetEmployeeInfo" responseStyle="element" outputPartName="item">
+        <parameters xmi:id="_wF13UJgGEe203sdugDDbQw">
+          <parameterMapping xmi:id="_wF13UZgGEe203sdugDDbQw" parameterName="empID" parameterType="Query" dataType="string"/>
+        </parameters>
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <parameters xmi:id="_3C5lgJgFEe203sdugDDbQw"/>
+      <advancedConfig xmi:id="_3BsroZgFEe203sdugDDbQw" blockingQueueSize="2147483647"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_3B0ncZgFEe203sdugDDbQw" bindingName="RestService"/>
+  </sca:service>
+  <sca:service xmi:id="_4WB84pirEe2nzu2RILn7vA" name="getemployeeinfo-getDeploymentStatus" promote="ComponentgetEmployeeInfo/getemployeeinfo-getDeploymentStatus">
+    <sca:interface.wsdl xmi:id="_4Weo0JirEe2nzu2RILn7vA" interface="http://xmlns.example.com/20230119200044PLT#wsdl.interface(getemployeeinfo-getDeploymentStatus)" scaext:wsdlLocation="../Processes/getemployeeinfo/getEmployeeInfo.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_4WnywJirEe2nzu2RILn7vA" name="RestService1" path="/getemployeeinfo/getDeploymentStatus" docBasePath="http://localhost:7777/GetEmployeeInfo" docResourcePath="getEmployeeInfo" basePath="/" connector="getemployeeinfo.getEmployeeInfo" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/getemployeeinfo.getEmployeeInfo-getEmployeeInfo.json">
+      <operation xmi:id="_4WnywpirEe2nzu2RILn7vA" operationName="get" nickname="get-getemployeeinfo-getDeploymentStatus" httpMethod="GET" notes="getGetEmployeeInfo" responseStyle="element" outputPartName="item">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <parameters xmi:id="_4WxjwJirEe2nzu2RILn7vA"/>
+      <advancedConfig xmi:id="_4WnywZirEe2nzu2RILn7vA" blockingQueueSize="2147483647"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_4Wnyw5irEe2nzu2RILn7vA" bindingName="RestService1"/>
+  </sca:service>
+  <sca:property xmi:id="_esxIIJgFEe203sdugDDbQw" name="BW.DEPLOYMENTUNIT.TYPE" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_etF4QJgFEe203sdugDDbQw" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_etPpQJgFEe203sdugDDbQw" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_etW-AJgFEe203sdugDDbQw" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_ethWEJgFEe203sdugDDbQw" name="BW.DOMAIN.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_etmOkJgFEe203sdugDDbQw" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_etruIJgFEe203sdugDDbQw" name="BW.APPSPACE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_etxNsJgFEe203sdugDDbQw" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_et04EJgFEe203sdugDDbQw" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_8tlBoJgLEe203sdugDDbQw" name="TestFilePath" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_-8XNYJgLEe203sdugDDbQw" name="envName" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_ExJIEJgPEe2dVtbYOU5O8Q" name="BW.CLOUD.PORT" type="XMLSchema:int" scalable="true"/>
+  <sca:property xmi:id="_A3-BoJgQEe2dVtbYOU5O8Q" name="/HTTPConnection/Host" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_D2qnYJgQEe2dVtbYOU5O8Q" name="/HTTPConnection/Port" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:component xmi:id="_3A-S4JgFEe203sdugDDbQw" name="ComponentgetEmployeeInfo" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_3A-S4ZgFEe203sdugDDbQw" processName="getemployeeinfo.getEmployeeInfo"/>
+    <sca:service xmi:id="_3BDLYJgFEe203sdugDDbQw" name="getemployeeinfo">
+      <sca:interface.wsdl xmi:id="_3BDycJgFEe203sdugDDbQw" interface="http://xmlns.example.com/20230119200044PLT#wsdl.interface(getemployeeinfo)" scaext:wsdlLocation="../Processes/getemployeeinfo/getEmployeeInfo.bwp"/>
+    </sca:service>
+    <sca:service xmi:id="_4WB84JirEe2nzu2RILn7vA" name="getemployeeinfo-getDeploymentStatus">
+      <sca:interface.wsdl xmi:id="_4WB84ZirEe2nzu2RILn7vA" interface="http://xmlns.example.com/20230119200044PLT#wsdl.interface(getemployeeinfo-getDeploymentStatus)" scaext:wsdlLocation="../Processes/getemployeeinfo/getEmployeeInfo.bwp"/>
+    </sca:service>
+  </sca:component>
+</sca:composite>

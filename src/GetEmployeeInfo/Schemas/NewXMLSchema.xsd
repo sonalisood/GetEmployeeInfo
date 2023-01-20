@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/NewXMLSchema" xmlns:tns="http://www.example.org/NewXMLSchema" elementFormDefault="qualified">
+
+    <element name="Request" type="tns:RequestType"></element>
+    
+    <element name="Response" type="tns:ResponseType"></element>
+    
+    <complexType name="RequestType">
+    	<sequence>
+    		<element name="EmployeeId" type="string"></element>
+    	</sequence>
+    </complexType>
+    
+    <complexType name="ResponseType">
+    	<sequence>
+    		<element name="Name" type="string"></element>
+    		<element name="Country" type="string"></element>
+    		<element name="Age" type="string"></element>
+    	</sequence>
+    </complexType>
+</schema>
